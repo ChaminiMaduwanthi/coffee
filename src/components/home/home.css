@@ -1,49 +1,72 @@
 .home {
-    background: center / cover url(../../assets/images/background.png);
-    min-height: calc(100vh+var(--header-height));
+    background: url(../../assets/images/background.png) center center / cover no-repeat;
+    min-height: 100vh; /* Ensures it fills the viewport */
     display: flex;
     align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    padding: 2rem; /* Adds padding for better responsiveness */
+    box-sizing: border-box;
 }
 
-.home__container{
- width: 100%;
+.home__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Ensures proper stacking of content */
+    align-items: center;
+    text-align: center; /* Centers text content */
 }
 
-.home__content{
+.home__content {
     max-width: 660px;
+    width: 90%; /* Makes the content more responsive */
+    margin: auto;
 }
 
 .home__subtitle,
-.home__description{
-    color:var(--title-color);
+.home__description {
+    color: var(--title-color);
 }
 
-.home__subtitle{
+.home__subtitle {
     font-family: var(--second-font);
     font-size: var(--h1-font-size);
     font-weight: var(--weight-500);
+    margin-bottom: 1rem;
 }
 
-.home__title{
-    font-size: var(--biggest-font-size);
+.home__title {
+    font-size: calc(var(--biggest-font-size) * 1.2); /* Scales font size for larger screens */
     font-weight: var(--weight-700);
-    margin-block: 1.25rem;
+    margin: 1.25rem 0;
+    line-height: 1.2; /* Improves readability */
 }
 
-.home__description{
+.home__description {
     margin-bottom: 2.25rem;
+    line-height: 1.5; /* Makes it easier to read */
 }
 
-.home__btns{
+.home__btns {
     display: flex;
-    column-gap: 2rem;
+    flex-wrap: wrap; /* Wraps buttons on smaller screens */
+    gap: 1rem; /* Adds consistent spacing between buttons */
+    justify-content: center; /* Centers buttons */
 }
 
-.home__btn{
+.home__btn {
     background-color: transparent;
+    border: 2px solid var(--first-color); /* Adds a visible border */
+    color: var(--first-color); /* Matches the theme */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: var(--weight-500);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px; /* Adds rounded corners for modern UI */
 }
 
-.home__btn:hover{
-background-color: var(--first-color);
-color: var(--title-color);
+.home__btn:hover {
+    background-color: var(--first-color);
+    color: var(--title-color);
 }
