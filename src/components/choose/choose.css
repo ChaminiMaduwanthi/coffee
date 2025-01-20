@@ -1,0 +1,8 @@
+.choose__grid{
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.choose__description{
+    margin-bottom: 3rem;
+}

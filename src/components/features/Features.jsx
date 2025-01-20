@@ -1,6 +1,7 @@
-import React from 'react';
-import { features } from "../../data"; // Import the features array from data.jsx
+import React from "react";
+import { features } from "../../data"; // Import the features array from data.js
 import shape from "../../assets/images/img3.png";
+import "./features.css"
 
 const Features = () => {
   return (
@@ -15,12 +16,14 @@ const Features = () => {
             <img src={img} alt={title} className="feature__img" />
             <h3 className="feature__title">{title}</h3>
             <p className="feature__description">{description}</p>
-            <img src={shape} alt="Shape decoration" className="feature__shape" />
           </div>
         ))}
       </div>
+
+     
     </section>
   );
 };
 
 export default Features;
+

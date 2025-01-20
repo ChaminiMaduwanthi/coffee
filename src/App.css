@@ -117,6 +117,7 @@ img{
 
 .section__title{
     font-size: var(--big-font-size);
+    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -128,4 +129,9 @@ img{
     font-size: var(--h2-font-size);
     letter-spacing: 2px;
     margin-bottom: 0.5rem;
+}
+
+.title-left{
+    text-align: left;
+    margin-bottom: 1rem;
 }

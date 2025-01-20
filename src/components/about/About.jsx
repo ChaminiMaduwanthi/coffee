@@ -14,7 +14,7 @@ const About = () => {
 
         {/* Content Section */}
         <div className="about__content">
-          <h2 className="section__title" data-title="About Us">
+          <h2 className="section__title title-left" data-title="About Us">
             Nestled in the heart of Maharagama, our coffee shop is more than just a place to grab a quick coffee.
           </h2>
 
