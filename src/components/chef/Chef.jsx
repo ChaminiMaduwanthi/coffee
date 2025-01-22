@@ -60,6 +60,7 @@ const Chef = () => {
             </a>
 
             <a href="/" className="chef__social-liks">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium aspernatur id velit? Id porro eaque ex voluptatibus, blanditiis architecto eius eligendi perspiciatis aperiam iste praesentium placeat natus! Fugiat, consequatur neque!
               <FaLinkedin />
             </a>
 
