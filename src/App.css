@@ -41,6 +41,7 @@
 /*transition*/
 --transition:ease-in-out;
 
+
 /*reset*/
 *{
     margin: 0;
@@ -50,6 +51,7 @@
 
 input,
 textarea,
+button,
 body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -109,7 +111,13 @@ img{
     color: var(--first-color);
 }
 
+.btn--flex{
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
 }
+
+
 
 .section{
     padding-block: 7.5rem;
@@ -119,6 +127,8 @@ img{
     font-size: var(--big-font-size);
     text-align: center;
     margin-bottom: 1rem;
+    color: rgb(256, 256, 256);
+    
 }
 
 .section__title::before{
@@ -134,4 +144,4 @@ img{
 .title-left{
     text-align: left;
     margin-bottom: 1rem;
-}
+}}

@@ -19,51 +19,24 @@ const Chef = () => {
           <img src={C01} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">chamini</h3>
+            <h3 className="chef__title">Mano</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 
           <div className="chef__socials">
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaFacebookF />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaTwitter />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaLinkedin />
             </a>
 
-            <a href="/" className="chef__social-liks">
-              <FaYoutube />
-            </a>
-          </div>
-        </div>
-
-        <div className="chef__item">
-          <img src={C02} alt="" className="chef__img" />
-
-          <div className="chef__data">
-            <h3 className="chef__title">Kaweesha</h3>
-            <p className="chef__designation">Senior Chef</p>
-          </div>
-
-          <div className="chef__socials">
-            <a href="/" className="chef__social-liks">
-              <FaFacebookF />
-            </a>
-
-            <a href="/" className="chef__social-liks">
-              <FaTwitter />
-            </a>
-
-            <a href="/" className="chef__social-liks">
-              <FaLinkedin />
-            </a>
-
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaYoutube />
             </a>
           </div>
@@ -73,24 +46,51 @@ const Chef = () => {
           <img src={C03} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">Hiruni</h3>
+            <h3 className="chef__title">Kaweesha</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 
           <div className="chef__socials">
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaFacebookF />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaTwitter />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaLinkedin />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
+
+        <div className="chef__item">
+          <img src={C02} alt="" className="chef__img" />
+
+          <div className="chef__data">
+            <h3 className="chef__title">Lakshi</h3>
+            <p className="chef__designation">Senior Chef</p>
+          </div>
+
+          <div className="chef__socials">
+            <a href="/" className="chef__social-links">
+              <FaFacebookF />
+            </a>
+
+            <a href="/" className="chef__social-links">
+              <FaTwitter />
+            </a>
+
+            <a href="/" className="chef__social-links">
+              <FaLinkedin />
+            </a>
+
+            <a href="/" className="chef__social-links">
               <FaYoutube />
             </a>
           </div>
@@ -105,19 +105,19 @@ const Chef = () => {
           </div>
 
           <div className="chef__socials">
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaFacebookF />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaTwitter />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaLinkedin />
             </a>
 
-            <a href="/" className="chef__social-liks">
+            <a href="/" className="chef__social-links">
               <FaYoutube />
             </a>
           </div>
