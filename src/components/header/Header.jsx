@@ -1,37 +1,65 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import { animateScroll } from 'react-scroll';
+import { FaStream } from 'react-icons/fa';  // Keep the icon for the menu toggle
+import './header.css';
 
-import { links } from '../../data';
-import { FaStream } from "react-icons/fa";
-import { FaS } from 'react-icons/fa6';
-import "./header.css";
+export const links = [
+    { name: 'Home', path: 'home' },
+    { name: 'About', path: 'about' },
+    { name: 'Features', path: 'features' },
+    { name: 'Menu', path: 'menu' },
+    { name: 'Gallery', path: 'gallery' },
+    { name: 'Chef', path: 'chef' },
+];
 
 const Header = () => {
-  return (
-   <header className='header'>
-    <nav className='nav container'>
-        <a href='/' className='nav__logo'>
-        <p>Caffero</p>
-        </a>
+    const [scrollHeader, setScrollHeader] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="nav__menu">
-            <ul className="nav__list">
-                {links.map(({name,path}, index)=>{
-                    return(
-                        <li className="nav__item" key={index}>
-                            <a href={path} className="nav__link">{name}</a>
-                        </li>
+    const changeHeader = () => {
+        setScrollHeader(window.scrollY >= 80);
+    };
 
-                    );
-                })}
-            </ul>
-        </div>
+    useEffect(() => {
+        window.addEventListener('scroll', changeHeader);
+        return () => window.removeEventListener('scroll', changeHeader);
+    }, []);
 
-        <div className="nav__toggle">
-            <FaStream />
-        </div>
-    </nav>
-   </header>
-  )
-}
+    return (
+        <header className={`${scrollHeader ? 'scroll-header' : ''} header`}>
+            <nav className="nav container">
+                <Link to="/" className="nav__logo" onClick={() => animateScroll.scrollToTop()}>
+                    <p>Caffero</p>
+                </Link>
 
-export default Header
+                {/* Menu */}
+                <div className={`nav__menu ${menuOpen ? 'open' : ''}`}>
+                    <ul className="nav__list">
+                        {links.map(({ name, path }, index) => (
+                            <li key={index} className="nav__item">
+                                <Link
+                                    to={path}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    className="nav__link"
+                                    onClick={() => setMenuOpen(false)} // Close menu on link click
+                                >
+                                    {name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                {/* Hamburger Icon */}
+                <div className="nav__toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                    <FaStream />
+                </div>
+            </nav>
+        </header>
+    );
+};
+
+export default Header;

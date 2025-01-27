@@ -1,42 +1,108 @@
-.header{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+/* ===================
+   Navigation Styles
+==================== */
+
+/* Nav bar container */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Make sure it takes up full width */
+    height: var(--header-height); /* Set a fixed height */
 }
 
-.nav{
-    height: calc(var(--header-height) + 1.5rem);
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color:rgb(37, 27, 27); /* Optional: background color for the header */
 }
 
 .nav__logo {
-    font-size: calc(var(--large-font-size) * 3); /* Makes the font size 1.5x larger */
+    position: fixed; /* Keep the logo fixed at the top */
+    left: 20px;
+    z-index: 100;
+    font-size: calc(var(--large-font-size) * 3);
     font-weight: var(--weight-500);
-    color:#f4a261;
+    color: #f4a261;
+    cursor: pointer;
 }
 
 
-.nav__list{
-    display: flex;
-    column-gap:2rem;
+/* Hamburger icon styling */
+.nav__toggle {
+    font-size: 2rem;
+    display: none; /* Hide by default */
+    cursor: pointer;
+    position: absolute; /* Position relative to the nav container */
+    right: 0; /* Position to the right side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust to truly center */
 }
 
-.nav__link,
-.nav__toggle{
-    color:var(--title-color);
+/* Show hamburger icon on small screens */
+@media screen and (max-width: 992px) {
+    .nav__toggle {
+        display: block; /* Show the icon on smaller screens */
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 100%;
+        inset-inline: 0.75rem;
+        background-color: var(--title-color);
+        max-height: 220px;
+        overflow: scroll;
+        display: none; /* Hide by default */
+    }
+
+    /* Show menu when it's open */
+    .nav__menu.open {
+        display: block;
+    }
+
+    /* Adjust nav list */
+    .nav__list {
+        flex-direction: column;
+    }
+
+    /* Adjust each nav item */
+    .nav__item {
+        padding: 1rem;
+    }
+
+    .nav__link {
+        color: black !important;
+    }
 }
 
-.nav__link{
-    font-size: var(--large-font-size);
-    font-weight: var(--weight-500);
+/* ===================
+   Scroll Header Fix
+==================== */
+
+/* Scroll header changes */
+.scroll-header {
+    position: fixed;
+    background-color: black;
+    width: 100%; /* Ensure the width is 100% */
+    height: var(--header-height); /* Keep the same height as the home header */
+    animation: slide-down 0.7s;
 }
 
-.nav__toggle{
-    font-size: var(--h2-font-size);
-    display: none;
+/* Keep header size consistent when scrolling */
+.scroll-header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for scroll effect */
+}
+
+/* Keyframe for the slide-down animation */
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

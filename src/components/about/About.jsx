@@ -18,10 +18,6 @@ const About = () => {
             Nestled in the heart of Maharagama, our coffee shop is more than just a place to grab a quick coffee.
           </h2>
 
-          <p className="about__description">
-            At our coffee shop, we serve premium coffee, delicious treats, and a welcoming vibe. 
-          </p>
-
           {/* Details Section */}
           <div className="about__details grid">
             <p className="about__details-description">
