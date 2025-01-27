@@ -1,38 +1,44 @@
-.chef__grid{
-    grid-template-columns: repeat(4,1fr);
+/* Base Styles */
+.chef__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
-.chef__item{
+.chef__item {
     border-bottom: 3px solid var(--first-color);
     background-color: var(--container-color);
     padding: 0.5rem;
     position: relative;
     transition: 0.5s var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
-
-.chef__img{
-    width: 550px;
+.chef__img {
+    width: 100%;
+    max-width: 550px;
     height: 280px;
+    object-fit: cover;
 }
 
-.chef__data{
+.chef__data {
     padding: 0.75rem;
     text-align: center;
 }
 
-.chef__title{
+.chef__title {
     font-size: var(--largest-font-size);
     margin-bottom: 0.25rem;
 }
 
-.chef__job{
+.chef__job {
     color: var(--first-color);
     font-weight: var(--weight-500);
 }
 
-.chef__socials{
+.chef__socials {
     position: absolute;
     top: 1rem;
     right: 0.7rem;
@@ -43,7 +49,7 @@
     transition: 0.5s var(--transition);
 }
 
-.chef__social-links{
+.chef__social-links {
     background-color: var(--bg-color);
     color: var(--title-color);
     width: 40px;
@@ -54,19 +60,108 @@
     transition: 0.3s var(--transition);
 }
 
-
-/*======
-Hover Effect
-========*/
-
-.chef__item:hover{
+/* Hover Effects */
+.chef__item:hover {
     transform: translateY(-0.5rem);
 }
-.chef__item:hover .chef__socials{
+
+.chef__item:hover .chef__socials {
     right: 1rem;
     opacity: 1;
 }
 
-.chef__social-links:hover{
+.chef__social-links:hover {
     background-color: var(--first-color);
+}
+
+/* Responsive Styles */
+
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .chef__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .chef__img {
+        height: 300px;
+    }
+}
+
+/* Medium Screens (900px - 1199px) */
+@media (max-width: 1199px) and (min-width: 900px) {
+    .chef__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .chef__img {
+        height: 260px;
+    }
+
+    .chef__title {
+        font-size: calc(var(--largest-font-size) * 0.9);
+    }
+}
+
+/* Tablets (576px - 899px) */
+@media (max-width: 899px) and (min-width: 576px) {
+    .chef__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .chef__img {
+        height: 220px;
+    }
+
+    .chef__title {
+        font-size: calc(var(--largest-font-size) * 0.8);
+    }
+}
+
+/* Mobile Devices (300px - 575px) */
+@media (max-width: 575px) {
+    .chef__grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .chef__img {
+        height: 200px;
+    }
+
+    .chef__title {
+        font-size: calc(var(--largest-font-size) * 0.7);
+    }
+
+    .chef__socials {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .chef__social-links {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Extra Small Screens (Less than 300px) */
+@media (max-width: 300px) {
+    .chef__grid {
+        gap: 0.5rem;
+    }
+
+    .chef__img {
+        height: 180px;
+    }
+
+    .chef__title {
+        font-size: calc(var(--largest-font-size) * 0.6);
+    }
+
+    .chef__social-links {
+        width: 30px;
+        height: 30px;
+    }
 }

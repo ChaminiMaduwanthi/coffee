@@ -1,108 +1,225 @@
 /* ===================
-   Navigation Styles
+   Base Styles
 ==================== */
+/* Header Styles */
+.header {
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: var(--header-height); /* Fixed height */
+    background-color: black; /* Navbar background */
+    z-index: 999; /* High z-index to keep it above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Padding to prevent content overlap with fixed header */
+.container {
+    padding-top: var(--header-height); /* Adds padding equal to header height */
+}
+
+/* Scroll-activated header styling */
+.scroll-header {
+    background-color: #000; /* Darker background when scrolling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for effect */
+}
 
 /* Nav bar container */
 .nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes logo and menu to opposite sides */
     align-items: center;
-    position: relative;
-    width: 100%; /* Make sure it takes up full width */
-    height: var(--header-height); /* Set a fixed height */
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    
+    width: 100%; /* Full width */
+    height: var(--header-height); /* Fixed height */
+    padding: 0 2rem; /* Add padding for spacing */
 }
 
 .nav__logo {
-    position: fixed; /* Keep the logo fixed at the top */
-    left: 20px;
-    z-index: 100;
     font-size: calc(var(--large-font-size) * 3);
     font-weight: var(--weight-500);
     color: #f4a261;
     cursor: pointer;
+    margin-right: auto; /* Push the logo to the left */
 }
 
+.nav__menu {
+    display: flex;
+    gap: 2rem; /* Adds spacing between menu items */
+    margin-left: auto; /* Aligns menu to the right */
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: var(--large-font-size);
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--first-color); /* Add hover effect */
+}
 
 /* Hamburger icon styling */
 .nav__toggle {
     font-size: 2rem;
-    display: none; /* Hide by default */
+    display: none;
     cursor: pointer;
-    position: absolute; /* Position relative to the nav container */
-    right: 0; /* Position to the right side */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust to truly center */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Show hamburger icon on small screens */
-@media screen and (max-width: 992px) {
-    .nav__toggle {
-        display: block; /* Show the icon on smaller screens */
-    }
-
-    .nav__menu {
-        position: absolute;
-        top: 100%;
-        inset-inline: 0.75rem;
-        background-color: var(--title-color);
-        max-height: 220px;
-        overflow: scroll;
-        display: none; /* Hide by default */
-    }
-
-    /* Show menu when it's open */
-    .nav__menu.open {
-        display: block;
-    }
-
-    /* Adjust nav list */
-    .nav__list {
-        flex-direction: column;
-    }
-
-    /* Adjust each nav item */
-    .nav__item {
-        padding: 1rem;
-    }
-
-    .nav__link {
-        color: black !important;
-    }
+/* Menu */
+.nav__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
-/* ===================
-   Scroll Header Fix
-==================== */
+.nav__list {
+    display: flex;
+    gap: 2rem;
+}
 
-/* Scroll header changes */
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+    transition: color 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+/* Scroll Header */
 .scroll-header {
-    position: fixed;
-    background-color: black;
-    width: 100%; /* Ensure the width is 100% */
-    height: var(--header-height); /* Keep the same height as the home header */
+    background-color: rgb(10, 10, 10);
+    box-shadow: 0 4px 6px rgba(12, 12, 12, 0.1);
     animation: slide-down 0.7s;
 }
 
-/* Keep header size consistent when scrolling */
-.scroll-header {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for scroll effect */
-}
-
-/* Keyframe for the slide-down animation */
+/* Slide-down animation */
 @keyframes slide-down {
     0% {
         transform: translateY(-100%);
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+/* ===================
+   Responsive Styles
+==================== */
+
+/* Large Screens (1200px and above) */
+/* Large Screens (1200px and above) */
+@media (min-width: 1200px) {
+    .nav__menu {
+        gap: 2.5rem;
+        margin-right: 10rem; /* Push the menu to the right */
+        display: flex; /* Ensure it stays horizontal */
+    }
+
+    .nav__link {
+        font-size: var(--large-font-size);
+    }
+}
+
+
+/* Medium Screens (900px - 1199px) */
+@media (max-width: 1199px) {
+    .nav__menu {
+        gap: 2rem;
+    }
+
+    .nav__link {
+        font-size: calc(var(--normal-font-size) * 0.9);
+    }
+}
+
+/* Tablets (576px - 899px) */
+@media (max-width: 899px) {
+    .nav__toggle {
+        display: block;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 100%;
+        right: 1rem;
+        left: 1rem;
+        background-color: var(--title-color);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: var(--radius);
+        display: none;
+    }
+
+    .nav__menu.open {
+        display: flex;
+    }
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    .nav__item {
+        padding: 1rem 0;
+    }
+
+    .nav__link {
+        color: black;
+        font-size: var(--normal-font-size);
+    }
+}
+
+/* Mobile Devices (300px - 575px) */
+@media (max-width: 575px) {
+    .nav__toggle {
+        right: 15px;
+        font-size: 1.8rem;
+    }
+
+    .nav__menu {
+        right: 0.5rem;
+        left: 0.5rem;
+        gap: 0.75rem;
+    }
+
+    .nav__link {
+        font-size: calc(var(--normal-font-size) * 0.9);
+    }
+
+    .nav__item {
+        padding: 0.75rem 0;
+    }
+}
+
+/* Extra Small Screens (Less than 300px) */
+@media (max-width: 300px) {
+    .nav__toggle {
+        right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .nav__menu {
+        gap: 0.5rem;
+    }
+
+    .nav__link {
+        font-size: calc(var(--normal-font-size) * 0.8);
+    }
+
+    .nav__item {
+        padding: 0.5rem 0;
     }
 }
