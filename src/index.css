@@ -69,7 +69,10 @@
         display: block;
     }
 
-    
+    .about__grid,
+    {
+        grid-template-columns: 1fr !important;
+    }
     
     
 }

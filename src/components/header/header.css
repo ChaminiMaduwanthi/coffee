@@ -18,7 +18,7 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color:rgb(37, 27, 27); /* Optional: background color for the header */
+    
 }
 
 .nav__logo {
