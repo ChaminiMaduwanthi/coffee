@@ -5,6 +5,7 @@
     width: 100%;
     z-index: 100;
 }
+
 .nav{
     height: calc(var(--header-height) + 1.5rem);
     display:flex;
@@ -13,10 +14,12 @@
 
 }
 
-.nav__logo-img{
-    height:100px ;
-    width:150px;
+.nav__logo {
+    font-size: calc(var(--large-font-size) * 3); /* Makes the font size 1.5x larger */
+    font-weight: var(--weight-500);
+    color:#f4a261;
 }
+
 
 .nav__list{
     display: flex;

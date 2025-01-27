@@ -16,7 +16,7 @@ import Img15 from "./assets/images/img-15.png";
 import Img1 from "./assets/images/bg.png";
 import Img12 from "./assets/images/gallery3.png";
 import Img16 from "./assets/images/gallery3.png";
-import Img17 from "./assets/images/gallery3.png";
+import Img17 from "./assets/images/gallery1.png";
 
 
 export const links = [
@@ -31,7 +31,7 @@ export const links = [
 
 export const features = [
   {
-    img: Img7,
+    img: Img6,
     title: "Customizable Options",
     description: "Tailor our products and services to meet your specific needs.",
   },
@@ -41,7 +41,7 @@ export const features = [
     description: "We use only the finest ingredients for exceptional taste and quality.",
   },
   {
-    img: Img6,
+    img: Img7,
     title: "Fast Delivery",
     description: "Enjoy our quick and reliable delivery service.",
   },
@@ -71,7 +71,7 @@ export const menu = [
   },
   {
     id: 3,
-    img: Img8,
+    img: Img10,
     title: "Espresso",
     description: "Rich and bold espresso shot.",
     price: 200,
@@ -162,14 +162,14 @@ export const offer = [
     title: "Cappuccino Arabica",
     discount: "40%",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its normal distribution layout.",
+    "Indulge in the rich, smooth flavor of Cappuccino Arabica. Enjoy 40% off on this premium coffee blend, crafted for true coffee lovers seeking the perfect brew every time.",
   },
   {
     img: Img17,
     title: "Espresso Special",
     discount: "30%",
-    description:
-      "Enjoy a perfect blend of rich espresso with a creamy texture, crafted just for coffee lovers like you.",
+    description:"Experience the bold taste of Espresso Special and enjoy an exclusive 30% discount. Perfectly crafted for coffee lovers, this rich, aromatic blend elevates your coffee moments to perfection."
+      ,
   },
 ];
 

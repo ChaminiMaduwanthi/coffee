@@ -1,5 +1,5 @@
 .home {
-    background: url(../../assets/images/background.png) center center / cover no-repeat;
+    background: url(../../assets/images/main-bg.png) center center / cover no-repeat;
     min-height: 100vh; /* Ensures it fills the viewport */
     display: flex;
     align-items: center;

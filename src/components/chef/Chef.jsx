@@ -19,7 +19,7 @@ const Chef = () => {
           <img src={C01} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">Mano</h3>
+            <h3 className="chef__title">Silva</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 
@@ -46,7 +46,7 @@ const Chef = () => {
           <img src={C03} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">Kaweesha</h3>
+            <h3 className="chef__title">Jasmin</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 
@@ -73,7 +73,7 @@ const Chef = () => {
           <img src={C02} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">Lakshi</h3>
+            <h3 className="chef__title">Tom</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 
@@ -100,7 +100,7 @@ const Chef = () => {
           <img src={C04} alt="" className="chef__img" />
 
           <div className="chef__data">
-            <h3 className="chef__title">Nisansala</h3>
+            <h3 className="chef__title">Lisa</h3>
             <p className="chef__designation">Senior Chef</p>
           </div>
 

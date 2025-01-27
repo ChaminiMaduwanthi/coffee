@@ -15,7 +15,7 @@
 .section__title::after {
   font-size: 1rem;
   display: block;
-  color: #d4a373;
+  color: #cfa881;
   margin-top: 0.5rem;
 }
 
@@ -28,7 +28,7 @@
 .offer__content {
   display: flex;
   flex-direction: column;
-  background-color: #ecd2d2;
+  background-color: #d5bca2;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   overflow: hidden;
@@ -51,15 +51,16 @@
   text-align: center;
 }
 
-.offer__title {
+h3.offer__title {
   font-size: 1.8rem;
-  color: #000; 
   margin-bottom: 0.5rem;
+  color: black;
 }
+
 
 .offer__discount {
   font-size: 1.5rem;
-  color: #d4a373;
+  color: #ce8a45;
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -82,6 +83,6 @@
 }
 
 .offer__btn:hover {
-  background-color: #c0906a;
+  background-color: #a9805e;
   transform: scale(1.05);
 }
