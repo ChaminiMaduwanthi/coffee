@@ -1,22 +1,22 @@
-import Img2 from "./assets/images/img-2.jpg";
-import Img3 from "./assets/images/img3.png";
+
 import Img4 from "./assets/images/img-4.png";
 import Img5 from "./assets/images/img-5.png";
 import Img6 from "./assets/images/img-6.png";
 import Img7 from "./assets/images/img-7.png";
+
 import Img8 from "./assets/images/img-8.png";
 import Img9 from "./assets/images/img-9.png";
-import Img10 from "./assets/images/gallery1.png";
-import Img11 from "./assets/images/gallery2.png";
-
+import Img10 from "./assets/images/img-10.png";
+import Img11 from "./assets/images/img-11.png";
+import Img12 from "./assets/images/img-12.png";
 import Img13 from "./assets/images/img-13.png";
 import Img14 from "./assets/images/img-14.png";
 import Img15 from "./assets/images/img-15.png";
 
-import Img1 from "./assets/images/bg.png";
-import Img12 from "./assets/images/gallery3.png";
-import Img16 from "./assets/images/gallery3.png";
-import Img17 from "./assets/images/gallery1.png";
+import Img16 from "./assets/images/offer1.png";
+import Img17 from "./assets/images/img-2.jpg";
+import Img18 from "./assets/images/offer2.png";
+import Img19 from "./assets/images/gallery3.png";
 
 
 export const links = [
@@ -71,7 +71,7 @@ export const menu = [
   },
   {
     id: 3,
-    img: Img10,
+    img: Img18,
     title: "Espresso",
     description: "Rich and bold espresso shot.",
     price: 200,
@@ -134,7 +134,7 @@ export const gallery = [
   },
   {
     id: 3,
-    img: Img10,
+    img: Img19,
     title: "Cappuccino",
   },
   {

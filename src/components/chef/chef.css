@@ -16,12 +16,6 @@
     align-items: center;
 }
 
-.chef__img {
-    width: 100%;
-    max-width: 550px;
-    height: 280px;
-    object-fit: cover;
-}
 
 .chef__data {
     padding: 0.75rem;
@@ -79,7 +73,7 @@
 /* Large Screens (1200px and above) */
 @media (min-width: 1200px) {
     .chef__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
     }
 
